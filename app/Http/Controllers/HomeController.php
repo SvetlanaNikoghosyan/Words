@@ -9,7 +9,8 @@ class HomeController extends Controller
 {
     public function index()
     {
-//        dd(Word::all());
+
+
         return view('home');
     }
 
