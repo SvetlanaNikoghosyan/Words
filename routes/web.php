@@ -16,7 +16,7 @@ use App\Http\Controllers\TextController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
