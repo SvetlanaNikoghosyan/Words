@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="922c7ced-82e7-4647-a273-54c0dd6826c5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TextController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TextController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +19,13 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -141,7 +151,13 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\words2\public\css" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -164,7 +180,10 @@
       <workItem from="1601271275884" duration="14000" />
       <workItem from="1601532304175" duration="7881000" />
       <workItem from="1601794905167" duration="8220000" />
-      <workItem from="1601876106768" duration="5996000" />
+      <workItem from="1601876106768" duration="19877000" />
+      <workItem from="1601962283622" duration="13125000" />
+      <workItem from="1602048784872" duration="13000" />
+      <workItem from="1602049043552" duration="3777000" />
     </task>
     <servers />
   </component>
@@ -180,10 +199,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1601271288250" />
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1601876106799">
+    <state x="517" y="287" key="NewPhpFileDialog" timestamp="1601895302692">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1601876106799" />
+    <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1601895302692" />
+    <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1601974221077">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1601974221077" />
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1602049043646">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1602049043646" />
     <state x="339" y="162" width="672" height="677" key="run.anything.popup" timestamp="1601539692618">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

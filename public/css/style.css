@@ -1,0 +1,45 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+h1{
+    color: red;
+    text-align: center;
+}
+.main {
+    margin: 80px auto;
+    text-align: center;
+}
+.wrong {
+    background-color: red;
+    cursor: pointer;
+}
+body{
+    background-color: #a0aec0;
+}
+#inputtext{
+    border: 1px solid black;
+    width: 300px;
+    height: 200px;
+    border-radius: 5px;
+    margin: 5px auto;
+    background-color: palegreen;
+}
+.form{
+    width: 300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.submit{
+    width: 300px;
+    height: 25px;
+    margin: 10px auto;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: forestgreen;
+    color: #a0aec0;
+}

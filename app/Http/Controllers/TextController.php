@@ -8,51 +8,56 @@ use Illuminate\Support\Facades\DB;
 
 
 class TextController extends Controller
-{
-    public function getword($arr)
     {
-        $testword = 'Error';
-        $newarr = [];
-        for ($i = 0; $i < count($arr); $i++) {
-            if ($arr[$i] == '' || $arr[$i] == ',' || $arr[$i] == ':' || $arr[$i] == '.') {
-                unset($arr[$i]);
-            } else {
-                $word = $arr[$i];
-                $dbwords = DB::select('select word from words');
-                //  dd($dbwords);
-                for ($j = 0; $j < count($dbwords); $j++) {
-                    foreach ($dbwords[$j] as $key => $value) {
-
-                        $textword = $word;
-                        $test = similar_text($textword, $value, $percent);
-
-                        if ($percent == 100) {
-                            return "";
-                        }
-                        else if ($percent >= 80 && $percent < 100) {
-
-                            $newarr[] = $value;
-                        }
+          public function getword(Request $request)
+            {
+                $text = $request->get('myword');
+                $arr = explode(" ", $text);
+                $DBarr = [];
+                $final='';
+//                $dbwords = DB::select('select word from words');
+                $dbwords = Word::all();
+                foreach ($dbwords as $word)
+                    {
+                        $DBarr[]=$word->word;
                     }
+                for ($i = 0; $i < count($arr); $i++)
+                    {
+                        $myword = $arr[$i];
+                        $input = $DBarr;
+                        $similartext=[];
+                        foreach($input as $word)
+                            {
+                                similar_text($word, $myword,  $percent);
 
+                                if ($percent > 80 && $percent < 100 )
+                                    {
+                                        $similartext[] = $word;
+                                    }
+                                else if($percent == 100)
+                                    {
+                                        $similartext[] = $myword;
+                                    }
+                            }
+                    if (!in_array($myword, $similartext))
+                        {
+                            $final.= "<span class='wrong' id ='id$i'>";
+                            $final.= " $myword </span>";
+                            $final.= '<div id="select" class="select" style="display: none;">
+                                                <select class="options">';
+                            if(count($similartext) > 0):
+                                foreach ($similartext as $word) :
+                                    $final.= '<option value = "' .$word. '" > ' .$word. ' </option>';
+                                endforeach;
+                            endif;
+                            $final.= " </select></div>"." ";
+                        }
+                    else
+                        {
+                            $final.= "<span id = 'id$i'>";
+                            $final.= " $myword </span>";
+                        }
                 }
+                return response()->json(['trueWord' => $final]);
             }
-        }
-//        dd($newarr);
-//        return view('home', compact('newarr'));
-
-//        print_r($newarr);
-
-//        return response($newarr);
-        return $newarr;
     }
-
-    public function text(Request $request)
-    {
-        $text = $request->get('myword');
-        $arr = explode(" ", $text);
-        $trueWord = $this->getword($arr);
-       // dd($trueWord);
-        return response()->json(['trueWord'=>$trueWord]);
-    }
-}

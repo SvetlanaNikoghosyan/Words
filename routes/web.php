@@ -20,4 +20,4 @@ Route::get('/', function () {
 });
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-Route::post('/home', [TextController::class, 'text'])->name('text');
+Route::post('/home', [TextController::class, 'getword'])->name('getword');
