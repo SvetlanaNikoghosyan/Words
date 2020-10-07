@@ -44,7 +44,7 @@ class TextController extends Controller
                             $final.= "<span class='wrong' id ='id$i'>";
                             $final.= " $myword </span>";
                             $final.= '<div id="select" class="select" style="display: none;">
-                                                <select class="options">';
+                                                <select class="options"><option disabled selected>Ընտրել</option>';
                             if(count($similartext) > 0):
                                 foreach ($similartext as $word) :
                                     $final.= '<option value = "' .$word. '" > ' .$word. ' </option>';

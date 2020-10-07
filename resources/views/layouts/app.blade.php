@@ -21,14 +21,12 @@
     $(document).ready(function () {
 
         $('#contact-form').on('submit',function(event){
-            event.preventDefault();
-
+            event.preventDefault(event);
             $.ajaxSetup({
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 }
             });
-
             let myword = $("#inputtext").text();
             $.ajax({
                 url: '/home',
@@ -48,6 +46,7 @@
                      let newWord = $(this).val();
                         $(this).parents('.select').prev('span').text(newWord);
                         $(this).parents('.select').prev('span').removeClass('wrong');
+                        // $(this).parents('.select').prev('span').removeClass('wrong');
                         $(this).parents('.select').css("display", "none");
                     })
 
